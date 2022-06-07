@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 const { checkAuth } = require('../service/auth');
 const { checkFile } = require('../service/fileHandler');
-const uploadController = require('../controllers/upload');
+const UploadController = require('../controllers/upload');
 
-router.post('/', checkAuth, checkFile, uploadController.uploadToImgur);
+router.post('/', checkAuth, checkFile, UploadController.uploadToImgur);
 
 module.exports = router;
