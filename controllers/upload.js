@@ -3,7 +3,6 @@ const sizeOf = require('image-size');
 const appError = require('../service/appError');
 const asyncErrorHandler = require('../service/asyncErrorHandler');
 const successHandler = require('../service/successHandler')
-const { checkImageSize } = require('../service/fileHandler');
 
 const uploadToImgur = asyncErrorHandler(async (req, res, next) => {
   if(!req.files) return appError(400,'尚未上傳檔案',next);
